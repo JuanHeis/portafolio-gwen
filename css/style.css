@@ -1,13 +1,13 @@
-
 html {
     background-color: var(--background-1);
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     color: var(--white);
     font-size: 62.5%;
     font-family: 'Arvo', serif;
@@ -22,9 +22,7 @@ body{
     --body-1-bold: bold 1.8rem 'Arvo', serif;
     --body-2: normal 1.4rem 'Arvo', serif;
     --body-2-bold: bold 1.4rem 'Arvo', serif;
-
     /* Colores */
-
     --primary: #5928E5;
     --secondary: #72757E;
     --white: #FFFFFE;
@@ -34,12 +32,17 @@ body{
     --background-2: #242629;
     --button: #7F5AF0;
 }
-.wrapper{
+.proyects{
+    max-inline-size: 781px;
+    margin: 0 auto;
+}
+.wrapper {
     max-width: 1188px;
     margin-inline: auto;
 }
-.button--primary{
-    border: 0px;
+
+.button--primary {
+    border: 1px solid var(--button);
     color: var(--white);
     background-color: var(--button);
     font: var(--button-font);
@@ -47,7 +50,8 @@ body{
     padding-inline: 24px;
     border-radius: 4px;
 }
-.button--secondary{
+
+.button--secondary {
     border: 1px solid var(--button);
     color: var(--button);
     font: var(--button-font);
@@ -56,7 +60,8 @@ body{
     padding-inline: 24px;
     border-radius: 4px;
 }
-.button--section{
+
+.button--section {
     border: 0px;
     background-color: var(--tertiary);
     font: var(--button-font);
@@ -65,7 +70,13 @@ body{
     padding-inline: 24px;
     border-radius: 4px;
 }
-.button--large{
+
+.project__button-container {
+    margin: 0;
+    padding: 0;
+}
+
+.button--large {
     border: 0px;
     color: var(--white);
     background-color: var(--button);
@@ -74,7 +85,8 @@ body{
     padding-inline: 64px;
     border-radius: 4px;
 }
-.button--large::after{
+
+.button--large::after {
     vertical-align: middle;
     content: '';
     height: 24px;
@@ -86,92 +98,166 @@ body{
 h4 {
     font: var(--headline-4);
 }
+
 h1 {
     font: var(--headline-1);
     color: var(--white);
 }
+
 /* Header */
 
 header ul {
     display: none;
 }
 
-header{
+header {
     padding-block: 20px;
     padding-inline: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header h4{
+
+header h4 {
     margin: 0px;
 }
+
 .header__menu-icon {
     height: 24px;
     width: 24px;
 }
-.header__menu-icon:hover{
-    
-}
+
+.header__menu-icon:hover {}
 
 /* main  */
 
 main {
     padding-inline: 16px;
 }
-.hero{
+
+.hero {
     padding-block: 80px;
 }
-.hero h1{
+
+.hero h1 {
     font: var(--headline-4);
 }
-.hero p{
+
+.hero p {
     font: var(--body-1);
     color: var(--secondary);
 }
 
-
 /* Main - Projects */
-.proyects h2{
+
+.proyects h2 {
     font: var(--headline-4);
 }
-.project .button--primary{
+
+.project .button--primary {
     width: 100%;
     display: block;
     margin-block-start: 16px;
 }
 
-.project .button--secondary{
+.project .button--secondary {
     width: 100%;
     display: block;
     margin-block-end: 16px;
 }
+
 .project__tittle {
-  
     margin-block: 16px;
     font: var(--body-1);
     color: var(--grey);
 }
-.project__description{
+
+.project__description {
     margin-block: 16px;
-font: var(--headline-5);
-color: var(--grey);
+    font: var(--headline-5);
+    color: var(--grey);
 }
-.project img{
-    max-width: 328px;
+
+.project img {
+    max-inline-size: 328px;
     display: block;
     margin-inline: auto;
 }
-.project{
+
+.project {
     margin-block: 80px;
 }
 
-
 /* bussines */
-.bussines-job img{
+
+.bussines-job img {
     display: block;
     margin-inline: auto;
 }
-.bussines-job h2{
+
+.bussines-job h2 {
     font: var(--headline-4);
+}
+
+/* contact */
+
+footer {
+    margin: 0 16px;
+}
+
+.contact a {
+    font: var(--headline-4);
+    color: var(--button);
+}
+
+.contact h2 {
+    font: var(--headline-4);
+}
+
+.contact-left, .contact-rigth {
+    margin: 32px 0;
+}
+
+.contact-left p, .contact-rigth p {
+    margin: 16px 0;
+    font: var(--body-1);
+    color: var(--secondary);
+}
+
+.contact-left ul, .contact-rigth ul {
+    font: var(--body-2);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+.contact a {
+    display: block;
+}
+
+.contact-left ul li, .contact-rigth ul li {
+    margin: 16px 0;
+    list-style: none;
+}
+
+@media (min-width: 750px) {
+    .hero h1 {
+        font: var(--headline-1);
+    }
+    .project img {
+        max-inline-size: 782px;
+    }
+    .contact h2 {
+        font: var(--headline-2);
+    }
+    .contact a {
+        font-size: 6.4rem;
+    }
+    .bussines-job h2{
+        font: var(--headline-2);
+    }
+    .proyects h2{
+        font: var(--headline-2);
+        text-align: center;
+    }
 }

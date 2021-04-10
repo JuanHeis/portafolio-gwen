@@ -1,0 +1,34 @@
+
+
+@media (min-width: 615px) {
+    .project .button--primary {
+        width: auto;
+        display: inline-block;
+        margin-left:16px;
+        margin-block-start  : 0;
+        justify-self:flex-start;
+    }
+    
+    .project .button--secondary {
+        width: auto;
+        display: inline-block;
+        margin-block-end: 0;
+       
+        
+    }
+    .project__button-container{
+        display: flex;
+    }
+ 
+    .bussines-job div{
+        display: flex;
+    }
+    
+    .contact-left, .contact-rigth{
+        display: inline-block;
+        inline-size: 273px;
+    }
+    .bussines-job div img{
+        inline-size: 374px;
+    }
+}
