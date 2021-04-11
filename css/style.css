@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -40,7 +41,10 @@ body {
     max-width: 1188px;
     margin-inline: auto;
 }
-
+.button--primary:hover{
+    cursor: pointer;
+    background-color: var(--primary);
+}
 .button--primary {
     border: 1px solid var(--button);
     color: var(--white);
@@ -50,7 +54,11 @@ body {
     padding-inline: 24px;
     border-radius: 4px;
 }
-
+.button--secondary:hover{
+    color: white;
+    cursor: pointer;
+    background-color: var(--button);
+}
 .button--secondary {
     border: 1px solid var(--button);
     color: var(--button);
@@ -98,17 +106,45 @@ body {
 h4 {
     font: var(--headline-4);
 }
-
+a {
+    color: var(--white);
+    text-decoration: none;
+}
 h1 {
     font: var(--headline-1);
     color: var(--white);
 }
 
 /* Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-1);
+}
+header h4{
+    display: inline-block;
+}
+header nav{
 
-header ul {
     display: none;
 }
+
+header ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    display: flex;
+    width: 506px;
+    justify-content: space-between;
+
+}
+header ul li{
+    font: var(--body-2-bold);
+    text-transform: uppercase;
+    list-style: none;
+}
+
+
 
 header {
     padding-block: 20px;
@@ -125,9 +161,23 @@ header h4 {
 .header__menu-icon {
     height: 24px;
     width: 24px;
+    left: 24px;
+    z-index: 50;
+    display: inline-block;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../rsc/ico/icon-menu.svg");
+}
+.header__menu-icon--interact{
+    z-index: 100;
+opacity: 0;
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
 }
 
-.header__menu-icon:hover {}
 
 /* main  */
 
@@ -240,6 +290,33 @@ footer {
     list-style: none;
 }
 
+
+/* Hamburguer  */
+.header__menu-icon--interact:checked + .hamburguer{
+    transform: translateY(0);
+    opacity: 1;
+}
+.hamburguer {
+    z-index: 10;
+    transition: 0.2s ease-in;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: var(--background-2);
+    width: 200px;
+    transform: translateY(-200px);
+    opacity: 0;
+}
+.hamburguer ul{
+    display: block;
+    width: auto;
+    padding-block: 32px;
+}
+.hamburguer li{
+    text-align: center;
+    margin-block: 16px;
+    display: block;
+}
 @media (min-width: 750px) {
     .hero h1 {
         font: var(--headline-1);
@@ -250,14 +327,24 @@ footer {
     .contact h2 {
         font: var(--headline-2);
     }
-    .contact a {
-        font-size: 6.4rem;
-    }
+ 
     .bussines-job h2{
         font: var(--headline-2);
     }
     .proyects h2{
         font: var(--headline-2);
         text-align: center;
+    }
+    header span{
+        display: none;
+    }
+    header nav{
+        display: inline-block;
+    }
+    
+}
+@media (min-width: 900px) {
+    .contact a {
+        font-size: 4.4rem;
     }
 }

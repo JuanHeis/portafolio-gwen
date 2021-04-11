@@ -25,33 +25,68 @@
     <button class="button--large">Button</button> -->
 
     <header>
-        <h4>
-            Gwen Stacy
-        </h4>
-        <ul>
-            <li>
-                home
-            </li>
-            <li>
-                proyectos
-            </li>
-            <li>
-                Testimonios
-            </li>
-            <li>
-                contacto
-            </li>
-        </ul>
-        <span>
-            <img class="header__menu-icon" src="./rsc/ico/icon-menu.svg" alt="">
-        </span>
+            <h4>
+                Gwen Stacy
+            </h4>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#home">
+                            home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            proyectos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#testi">
+                            Testimonios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            contacto
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+           
+            <span>
+                <div class="header__menu-icon"></div>
+                <input type="checkbox" class="header__menu-icon--interact" src="./rsc/ico/icon-menu.svg" >
+                <div class="hamburguer">
+                    <ul>
+                        <li>
+                            <a href="#home">
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects">
+                                proyectos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#testi">
+                                Testimonios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+     
     </header>
 
     <main>
         <div class="wrapper">
-
-
-            <section class="hero">
+            <section class="hero" id="home">
                 <h1>
                     Diseño y código de punta a punta de experiencias digitales innovadoras, sostenibles y flexibles.
                 </h1>
@@ -67,7 +102,7 @@
                 </div>
             </section>
 
-            <section class="proyects">
+            <section id="projects" class="proyects">
                 <h2>
                     El trabajo que hago
                     y los proyectos a los que he ayudado.
@@ -123,7 +158,7 @@
                 </div>
             </section>
 
-            <section class="bussines-job">
+            <section id="testi" class="bussines-job">
                 <h2>
                     He tenido el privilegio de trabajar con múltiples empresas como.
                 </h2>
@@ -135,7 +170,7 @@
             </section>
         </div>
     </main>
-    <footer class="contact">
+    <footer id="contact" class="contact">
         <div class="wrapper">
             <h2>
                 ¿Quieres trabajar conmigo o simplemente tomar un café? - ¡Hazme ping!
